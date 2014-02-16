@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="styleindex.css" />
+
+<script>
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '632915023441526',
+    status     : true, // check login status
+    cookie     : true, // enable cookies to allow the server to access the session
+    xfbml      : true  // parse XFBML
+  });
+
+  FB.Event.subscribe('auth.authResponseChange', function(response) {
+    //Verifica si esta conectado a fb y a la aplicacion
+    if (response.status === 'connected') {
+      //se procede a las acciones que designemos
+      seLogueo();
+    } else if (response.status === 'not_authorized') {
+      //si no esta autorizado, es decir esta conectado a fb pero no ha concedido los permisos para la aplicacion
+      //se ejecuta el metodo login(). para que ingrese sus credenciales
+      FB.login();
+    } else {
+      //si no esta autorizado, ni conectado al fb
+      //se ejecuta el metodo login(). para que ingrese sus credenciales
+      FB.login();
+    }
+  });
+  };
+
+  // Load the SDK asynchronously
+  (function(d){
+   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement('script'); js.id = id; js.async = true;
+   js.src = "//connect.facebook.net/es_ES/all.js";
+   ref.parentNode.insertBefore(js, ref);
+  }(document));
+
+  //Aqui definimos las acciones a realizar cuando ya esta logueado
+  function seLogueo() {
+    //obtenemos los datos en el objeto response
+    FB.api('/me', function(response) {
+      document.getElementById('fb_name').innerHTML = response.name;
+      document.getElementById('correo').innerHTML = response.email;
+      
+      if(response.gender === "male"){
+        document.getElementById('sexo').innerHTML = "Hombre";
+      }else {
+        document.getElementById('sexo').innerHTML = "Mujer";
+      }
+      console.log('Bienvenido, ' + response.name + '.');
+    });
+  }
+</script>
+
+</head>
+<body>
+<div id="fb-root"></div>
+<div class="titulo font-effect-3d">
+  <p>XtroverSion Logueado</p>
+</div>
+<div class='login' id='main'>
+
+  <div id='credenciales'>
+      <p>Estas logueado como: <span id="fb_name"></span></p>
+      <p>Tu correo es: <span id="correo"></span></p>
+      <p>Y eres: <span id="sexo"></span></p>
+  </div>
+
+</div>
+</body>
+</html>
