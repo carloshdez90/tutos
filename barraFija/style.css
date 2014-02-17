@@ -1,0 +1,102 @@
+/******************************************************/
+@import url(http://fonts.googleapis.com/css?family=Frijole&effect=3d);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,200);
+
+/*Estilo general de la pagina*/
+body {
+  background: transparent url(dark.png) repeat;
+  font: normal .80em 'Raleway', arial, sans-serif;
+  color: #FFF;
+  margin: 0;
+}
+
+section{
+	width: 70%;
+	margin:80px auto 20px auto; 
+	height: 1000px;
+	border: 1px solid white;
+	border-radius: 20px;
+	box-shadow: 0 0 15px gray;
+	box-shadow: inset 0 0 5px gray;
+	text-align: center;
+}
+
+span {
+	font-family: 'Frijole', cursive;
+	font-size: 40px;
+	margin-left: 20px;
+}
+
+/*Estilo del boton con la X*/
+.boton{
+	background-color: black;
+	font-weight: bold;
+	color: white;
+	width: 25px;
+	height: 25px;	
+	border-radius: 100%;
+	position: fixed;
+	bottom: 10px;
+	right: 15px;
+	text-align: center;
+}
+
+.boton:hover{
+	background-color: red;
+	cursor: pointer;	
+}
+
+/*Estilo de las columnas*/
+.columna{
+	float: left;
+	width: 33%;
+	margin-top: 30px;
+}
+
+/*Estilo de los parrafos*/
+p{
+	text-align: justify;
+	margin: 0 10% 0 10%;
+}
+
+/*Estilo de la imagen*/
+img {
+	width: 90%;
+	height: 50%;
+}
+
+
+/*Estilo de los diferentes tipos de barras en las paginas*/
+.barra {
+	position: absolute; /*El div será ubicado con relación al documento*/
+	left:0px; /*A la derecha deje un espacio de 0px*/
+	right:0px; /*A la izquierda deje un espacio de 0px*/
+	top:0px; /*Abajo deje un espacio de 0px*/
+	height:60px; /*alto del div*/
+	background-color:  gray;
+	color: white;
+}
+
+.barraSuperior {
+	position:fixed; /*El div será ubicado con relación a la pantalla*/
+	left:0px; /*A la derecha deje un espacio de 0px*/
+	right:0px; /*A la izquierda deje un espacio de 0px*/
+	top:0px; /*Abajo deje un espacio de 0px*/
+	height:60px; /*alto del div*/
+	z-index:0;
+	background-color:  gray;
+	color: white;
+}
+
+.barraInferior {
+	position:fixed; /*El div será ubicado con relación a la pantalla*/
+	left:0px; /*A la derecha deje un espacio de 0px*/
+	right:0px; /*A la izquierda deje un espacio de 0px*/
+	bottom:0px; /*Abajo deje un espacio de 0px*/
+	height:25px; /*alto del div*/
+	z-index:0;
+	background-color:  rgba(255,255,255,0.6);
+	color: black;
+	font-size: 18px;
+	text-align: center;
+}
