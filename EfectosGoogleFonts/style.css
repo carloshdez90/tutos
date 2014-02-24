@@ -1,0 +1,49 @@
+/******************************************************/
+@import url(http://fonts.googleapis.com/css?family=Frijole&effect=3d);
+@import url(http://fonts.googleapis.com/css?family=Frijole&effect=anaglyph|brick-sign|canvas-print|crackle|decaying|destruction|distressed|distressed-wood|emboss|fire|fire-animation|fragile|grass|ice|mitosis|neon|outline|putting-green|scuffed-steel|shadow-multiple|splintered|static|stonewash|3d|3d-float|vintage|wallpaper);
+
+
+/************************ Fuentes del Tuto ******************************/
+
+/*@import url(http://fonts.googleapis.com/css?family=Russo+One&effect=brick-sign|fire-animation);
+*/
+/************************ Fuentes del Tuto ******************************/
+
+/*Estilo general de la pagina*/
+body {
+  background: transparent url(dark.png) repeat;
+  color: #FFF;
+  margin: 0;
+  font-family: 'Frijole', cursive;
+}
+
+section{
+	width: 70%;
+	margin:80px auto 20px auto; 
+	height: auto;
+	text-align: center;
+}
+
+span {
+	font-family: 'Frijole', cursive;
+	font-size: 40px;
+	margin-left: 20px;
+}
+
+.barra {
+	position: absolute; /*El div será ubicado con relación al documento*/
+	left:0px; /*A la derecha deje un espacio de 0px*/
+	right:0px; /*A la izquierda deje un espacio de 0px*/
+	top:0px; /*Abajo deje un espacio de 0px*/
+	height:60px; /*alto del div*/
+	background-color:  gray;
+	color: white;
+}
+
+/*Estilo y tipos de fuente*/
+.parrafo{
+	background-color: rgba(200,200,200, 0.3);
+	text-align: justify;
+	margin: 10% 10% 0 10%;
+	font-size: 60px;
+}
