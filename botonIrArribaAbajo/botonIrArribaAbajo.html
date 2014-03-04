@@ -49,14 +49,15 @@
 	$(document).ready(function() {
 
 		$("#Arriba").hide(); //ocultamos el boton para el primer ejemplo
-
-		$("#ArribayAbajo").hide();
+        $('#Abajo').fadeIn();
+        $('#Arriba1').fadeOut();
+		
 		$(function () {
 			$(window).scroll(function () {
 				if ($(this).scrollTop() > 50) {
-					$('#ArribayAbajo').fadeIn();
+					$('#Arriba1').fadeIn();
 				} else {
-					$('#ArribayAbajo').fadeOut();
+					$('#Arriba1').fadeOut();
 				}
 			});
 			$('#Arriba1').click(function () {
