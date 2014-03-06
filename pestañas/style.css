@@ -1,0 +1,81 @@
+/******************************************************/
+@import url(http://fonts.googleapis.com/css?family=Frijole&effect=3d);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+/*@import url(http://fonts.googleapis.com/css?family=Audiowide&effect=3d);*/
+
+
+/*Estilo general de la pagina*/
+body {
+  background: transparent url(dark.png) repeat;
+  color: #FFF;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+.barra {
+	position: absolute; /*El div será ubicado con relación al documento*/
+	left:0px; /*A la derecha deje un espacio de 0px*/
+	right:0px; /*A la izquierda deje un espacio de 0px*/
+	top:0px; /*Abajo deje un espacio de 0px*/
+	height:60px; /*alto del div*/
+/*
+	background-color:  #80BD01;
+*/
+    background-color: gray;
+	color: white;
+}
+
+
+
+/*Estilo para el titulo*/
+.titulo {
+    font-family: 'Frijole', cursive;
+	font-size: 40px;
+	margin-left: 20px;
+}
+
+
+/*Estilo de los parrafos*/
+p{
+	text-align: justify;
+	margin: 10px;
+	font-size: 50px;
+    font-weight: bold;
+}
+
+/*Espacio donde se mostraran el texto*/
+
+section{
+    width: 100%;
+}
+
+#show1, #show2{
+	width: 80%;
+	margin:0 auto;
+    border: 1px solid gray ;
+	box-shadow: 0 0 10px #64a6f4;
+	box-shadow: inset 0 0 5px #64a6f4;
+    background-color: rgba(102, 64, 131, 0.86);
+}
+
+#pestaña1, #pestaña2{
+    background-color: #6ad5f5;
+    margin-top: 80px;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#pestaña1{
+    margin-left: 10%;
+}
+
+#pestaña2{
+    margin-left: 10px;
+}
